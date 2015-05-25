@@ -1,0 +1,44 @@
+* {
+	font-family: 'Roboto', Arial, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: #056495
+}
+
+.ui-widget {
+	font-size: 90% !important;
+}
+
+.margem-superior {
+	margin-top: 20px;
+}
+
+.margem-inferior {
+	margin-bottom: 10px;
+}
+
+.margem-lateral {
+	margin-left: 35px;
+}
+
+.ui-inputfield {
+	margin-left: 1px !important;
+}
+
+.input-default {
+	height : 25px;
+	width: 178px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+.input-default:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}

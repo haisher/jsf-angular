@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	ng-app="jsfAngularApp">
+
+	<f:view contentType="text/html">
+		<h:head>
+			<f:facet name="first">
+				<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+				<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
+
+				<title>..:: JSF Angular ::..</title>
+
+				<h:outputStylesheet library="css" name="styles.css" />
+
+				<h:outputScript library="js" name="angular-1.3.8.min.js" />
+				<h:outputScript library="js" name="app.js" />
+				<h:outputScript library="js" name="controllers.js" />
+			</f:facet>
+		</h:head>
+
+		<h:body>
+			<h:form>
+				<h2>JSF + Angular</h2>
+
+				<p:menubar>
+					<p:submenu label="Menu">
+						<p:menuitem value="JSF" action="#{menuMB.jsf}" />
+						<p:menuitem value="Javascript" action="#{menuMB.angular}"/>
+					</p:submenu>
+
+					<f:facet name="options">
+						<p:commandButton ajax="false" action="#{menuMB.logout}" value="Logout" icon="ui-icon-extlink" />
+					</f:facet>
+				</p:menubar>
+			</h:form>
+		</h:body>
+
+		<div class="margem-superior margem-lateral">
+			<p:messages id="messages" showDetail="false" autoUpdate="true" />
+			<ui:insert name="content" />
+		</div>
+
+		<div class="margem-inferior">
+			<ui:insert name="rodape" />
+		</div>
+	</f:view>
+</html>
